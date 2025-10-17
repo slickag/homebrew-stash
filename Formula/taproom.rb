@@ -6,6 +6,12 @@ class Taproom < Formula
   license "MIT"
   head "https://github.com/hzqtc/taproom.git", branch: "main"
 
+  bottle do
+    root_url "https://ghcr.io/v2/slickag/stash"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "501531c89cff24abc895b4268032a66d9ba1b06effcd009bc17ac7227a2f6b84"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "266f20e2ed7900d4a233b6d016306027c11a5829027c2236d5539c4052dde6ac"
+  end
+
   depends_on "go" => :build
 
   def install
