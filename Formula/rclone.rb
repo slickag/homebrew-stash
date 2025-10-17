@@ -6,6 +6,12 @@ class Rclone < Formula
   license "MIT"
   head "https://github.com/rclone/rclone.git", branch: "master"
 
+  bottle do
+    root_url "https://ghcr.io/v2/slickag/stash"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "dc382cbe71d6aedf5e4aec1c4973d1ecd58e58ca45f9dfc0d2174d2800895137"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0b5bd84f089c919d6662be8da910f4145489369daea89f90c0630df9d6c0c3f5"
+  end
+
   depends_on "go" => :build
 
   on_linux do
